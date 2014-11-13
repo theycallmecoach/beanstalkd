@@ -17,7 +17,7 @@ BEANSTALKD_EXTRA="-b <%= @binlog_directory -%>"
 DAEMON_OPTS="-l $BEANSTALKD_LISTEN_ADDR -p $BEANSTALKD_LISTEN_PORT $BEANSTALKD_EXTRA"
 <% end %>
 
-<% if @service_enable -%>
+<% if @service_start_yes -%>
 ## Uncomment to enable startup during boot.
 START=yes
 <% end %>
